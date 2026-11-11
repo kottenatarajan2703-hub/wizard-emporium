@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wizard Emporium | A World Beyond Magic</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header class="navbar">
+
+    <div class="logo">✦ Wizard Emporium</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#categories">Collections</a>
+        <a href="#products">Shop</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <div class="nav-actions">
+
+        <button id="wishlistOpen">♡ Wishlist</button>
+
+        <button id="cartOpen">
+            🛒 Cart (<span id="cartCount">0</span>)
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <p class="eyebrow">✧ WELCOME TO THE WORLD OF MAGIC ✧</p>
+
+        <h1>Where Magic<br>Comes Alive</h1>
+
+        <p>
+            Discover enchanted treasures, mystical potions,
+            magical wands and extraordinary wizarding accessories.
+        </p>
+
+        <a href="#categories" class="main-btn">
+            EXPLORE THE MAGIC ✧
+        </a>
+
+    </div>
+
+    <div class="hero-star">✦</div>
+
+</section>
+
+
+<div class="announcement">
+    ✨ YOUR NEXT MAGICAL ADVENTURE STARTS HERE ✨
+</div>
+
+
+<!-- CATEGORIES -->
+
+<section class="categories section" id="categories">
+
+    <div class="section-heading">
+        <p>DISCOVER YOUR MAGIC</p>
+        <h2>Magical Collections</h2>
+        <span>✧ ━━━━━━━━━ ✧</span>
+    </div>
+
+    <div class="category-grid">
+
+        <a href="#products" class="category-card" data-filter="wands">
+            <span>🪄</span>
+            <h3>Magic Wands</h3>
+            <p>Find your perfect wand</p>
+            <small>EXPLORE COLLECTION ↓</small>
+        </a>
+
+        <a href="#products" class="category-card" data-filter="potions">
+            <span>🧪</span>
+            <h3>Potions</h3>
+            <p>Magical brews and bottles</p>
+            <small>EXPLORE COLLECTION ↓</small>
+        </a>
+
+        <a href="#products" class="category-card" data-filter="books">
+            <span>📚</span>
+            <h3>Magical Books</h3>
+            <p>Ancient spells and secrets</p>
+            <small>EXPLORE COLLECTION ↓</small>
+        </a>
+
+        <a href="#products" class="category-card" data-filter="balls">
+            <span>🔮</span>
+            <h3>Crystal Balls</h3>
+            <p>Discover the unknown</p>
+            <small>EXPLORE COLLECTION ↓</small>
+        </a>
+
+        <a href="#products" class="category-card" data-filter="owls">
+            <span>🦉</span>
+            <h3>Magical Owls</h3>
+            <p>Your mystical companions</p>
+            <small>EXPLORE COLLECTION ↓</small>
+        </a>
+
+        <a href="#products" class="category-card" data-filter="robes">
+            <span>🧙</span>
+            <h3>Robes & Uniforms</h3>
+            <p>Dress like a wizard</p>
+            <small>EXPLORE COLLECTION ↓</small>
+        </a>
+
+        <a href="#products" class="category-card" data-filter="quidditch">
+            <span>🏆</span>
+            <h3>Quidditch Gear</h3>
+            <p>Prepare for the match</p>
+            <small>EXPLORE COLLECTION ↓</small>
+        </a>
+
+        <a href="#products" class="category-card" data-filter="brooms">
+            <span>🧹</span>
+            <h3>Broomsticks</h3>
+            <p>Fly into the sky</p>
+            <small>EXPLORE COLLECTION ↓</small>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- SHOP -->
+
+<section class="products section" id="products">
+
+    <div class="section-heading">
+        <p>HANDPICKED TREASURES</p>
+        <h2>Explore Our Magical Shop</h2>
+        <span>✧ ━━━━━━━━━ ✧</span>
+    </div>
+
+    <div class="shop-controls">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search magical products..."
+        >
+
+        <select id="categoryFilter">
+
+            <option value="all">All Collections</option>
+            <option value="wands">Magic Wands</option>
+            <option value="potions">Potions</option>
+            <option value="books">Magical Books</option>
+            <option value="balls">Crystal Balls</option>
+            <option value="owls">Magical Owls</option>
+            <option value="robes">Robes & Uniforms</option>
+            <option value="quidditch">Quidditch Gear</option>
+            <option value="brooms">Broomsticks</option>
+
+        </select>
+
+        <select id="sortFilter">
+            <option value="default">Sort Products</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+            <option value="name">Name: A to Z</option>
+        </select>
+
+    </div>
+
+    <p id="resultCount" class="result-count"></p>
+
+    <div class="product-grid" id="productGrid"></div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about section" id="about">
+
+    <p>✧ OUR MAGICAL STORY ✧</p>
+
+    <h2>Not Just a Shop.<br>A Magical Experience.</h2>
+
+    <p>
+        Welcome to Wizard Emporium, where imagination meets
+        enchantment. Discover a world of fantasy treasures,
+        magical accessories and extraordinary collectibles.
+    </p>
+
+    <a href="#products" class="main-btn">DISCOVER MORE</a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>✦ Wizard Emporium ✦</h2>
+
+    <p>A World Beyond Magic</p>
+
+    <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#categories">Collections</a>
+        <a href="#products">Shop</a>
+        <a href="#about">About</a>
+    </div>
+
+    <p class="copyright">
+        © 2026 Wizard Emporium. All rights reserved.
+    </p>
+
+</footer>
+
+
+<!-- CART OVERLAY -->
+
+<div class="overlay" id="overlay"></div>
+
+
+<!-- CART DRAWER -->
+
+<aside class="cart-drawer" id="cartDrawer">
+
+    <div class="drawer-heading">
+
+        <h2>🛒 Magical Cart</h2>
+
+        <button id="cartClose">✕</button>
+
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-footer">
+
+        <h3 id="cartTotal">Total: ₹0</h3>
+
+        <button id="clearCart" class="clear-btn">
+            CLEAR CART
+        </button>
+
+        <button id="checkoutBtn" class="checkout-btn">
+            PROCEED TO CHECKOUT ✨
+        </button>
+
+    </div>
+
+</aside>
+
+
+<!-- WISHLIST DRAWER -->
+
+<aside class="wishlist-drawer" id="wishlistDrawer">
+
+    <div class="drawer-heading">
+        <h2>♡ My Wishlist</h2>
+        <button id="wishlistClose">✕</button>
+    </div>
+
+    <div id="wishlistItems" class="cart-items"></div>
+
+</aside>
+
+
+<!-- PRODUCT DETAILS MODAL -->
+
+<div class="modal" id="productModal">
+
+    <div class="modal-box">
+
+        <button id="modalClose" class="modal-close">✕</button>
+
+        <div id="modalContent"></div>
+
+    </div>
+
+</div>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
